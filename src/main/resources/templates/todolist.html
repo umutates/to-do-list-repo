@@ -43,7 +43,7 @@
 						<tbody th:each="td: ${todolist}">
 							<tr>
 								<td style="text-align: left;" th:text="${td.define}"></td>
-								<td td style="text-align: right;" th:text="${td.date}"></td>
+								<td style="text-align: right;" th:text="${td.date}"></td>
 								<td style="text-align: right;"><a
 									th:href="@{'/todo/delete/' + ${td.toDoId}}"
 									class="btn btn-sm btn-primary"><span title="delete"
