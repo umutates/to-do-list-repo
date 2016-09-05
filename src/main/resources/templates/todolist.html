@@ -15,7 +15,7 @@
 				<div class="inner">
 
 					<nav>
-						<ul class="nav masthead-nav"  >
+						<ul class="nav masthead-nav">
 							<li class="active"><a href="#">Home</a></li>
 							<li><a href="/logout">Log out</a></li>
 							<li><h4>
@@ -29,31 +29,31 @@
 			<div class="cover-container"
 				style="min-width: 1300px; height: 70%; /* For at least Firefox */ min-height: -50%;">
 
+				<div class="col-sm-8">
+					<table class="table table-inverse">
+						<thead>
+							<tr>
+								<th>TODO</th>
+								<th></th>
+								<th style="text-align: right;"><a href="/todo/add"
+									class="btn btn-sm btn-primary"><span
+										class="glyphicon glyphicon-plus"></span> New </a></th>
 
-				<table class="table table-inverse">
-					<thead>
-						<tr>
-							<th>TODO</th>
-							<th></th>
-							<th style="text-align: right;"><a href="/todo/add"
-								class="btn btn-sm btn-primary"><span
-									class="glyphicon glyphicon-plus"></span> New </a></th>
+							</tr>
+						</thead>
+						<tbody th:each="td: ${todolist}">
+							<tr>
+								<td style="text-align: right;" th:text="${td.define}"></td>
+								<td th:text="${td.date}"></td>
+								<td style="text-align: right;"><a
+									th:href="@{'/todo/delete/' + ${td.toDoId}}"
+									class="btn btn-sm btn-primary"><span title="delete"
+										class="glyphicon glyphicon-trash"></span></a></td>
+							</tr>
 
-						</tr>
-					</thead>
-					<tbody th:each="td: ${todolist}">
-						<tr>
-							<td th:text="${td.define}"></td>
-							<td th:text="${td.date}"></td>
-							<td style="text-align: right;"><a
-								th:href="@{'/todo/delete/' + ${td.toDoId}}"
-								class="btn btn-sm btn-primary"><span title="delete"
-									class="glyphicon glyphicon-trash"></span></a></td>
-						</tr>
-
-					</tbody>
-				</table>
-
+						</tbody>
+					</table>
+				</div>
 				<div class="mastfoot" style="min-width: 1200px;">
 					<div class="inner">
 						<p>
