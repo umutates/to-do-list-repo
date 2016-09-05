@@ -29,7 +29,7 @@
 			<div class="cover-container"
 				style="min-width: 1300px; height: 70%; /* For at least Firefox */ min-height: -50%;">
 
-				<div class="col-sm-8">
+				<div class="col-sm-8" align="center">
 					<table class="table table-inverse">
 						<thead>
 							<tr>
@@ -43,7 +43,7 @@
 						</thead>
 						<tbody th:each="td: ${todolist}">
 							<tr>
-								<td style="text-align: right;" th:text="${td.define}"></td>
+								<td style="text-align: left;" th:text="${td.define}"></td>
 								<td th:text="${td.date}"></td>
 								<td style="text-align: right;"><a
 									th:href="@{'/todo/delete/' + ${td.toDoId}}"
