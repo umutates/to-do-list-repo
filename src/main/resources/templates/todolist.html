@@ -26,14 +26,14 @@
 				</div>
 			</div>
 
-			<div class="cover-container"
+			<div class="container"
 				style="min-width: 1300px; height: 70%; /* For at least Firefox */ min-height: -50%;">
 				<div class="col-sm-8 container">
 					<table class="table table-inverse">
 						<thead>
 							<tr>
 								<th>TODO</th>
-								<th></th>
+								<th td style="text-align:right;" >Date</th>
 								<th style="text-align: right;"><a href="/todo/add"
 									class="btn btn-sm btn-primary"><span
 										class="glyphicon glyphicon-plus"></span> New </a></th>
@@ -43,7 +43,7 @@
 						<tbody th:each="td: ${todolist}">
 							<tr>
 								<td style="text-align: left;" th:text="${td.define}"></td>
-								<td th:text="${td.date}"></td>
+								<td td style="text-align: right;" th:text="${td.date}"></td>
 								<td style="text-align: right;"><a
 									th:href="@{'/todo/delete/' + ${td.toDoId}}"
 									class="btn btn-sm btn-primary"><span title="delete"
