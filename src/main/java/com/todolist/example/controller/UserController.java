@@ -49,7 +49,7 @@ public class UserController {
         userService.save(user);
         LOGGER.debug("SAVE_OK");
         model.addAttribute("singUpMessage","Congratulations!Registry successful.");
-        return "/login";
+        return "redirect:/login";
     }
     
     @GetMapping("/todolist")
