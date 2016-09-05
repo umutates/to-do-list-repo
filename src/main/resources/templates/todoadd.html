@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/javascript; charset=UTF-8"/>
+<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="/css/cover.css" />
+<script type="text/javascript" src="/js/bootstrap.min.js"/>
+		
+	
+</head>
+<body>
+	<div class="site-wrapper">
+
+		<div class="site-wrapper-inner">
+
+			<div class="cover-container">
+
+				<div class="masthead clearfix">
+					<div class="inner">
+
+						<nav>
+							<ul class="nav masthead-nav">
+								<li class="active"><a href="#">Home</a></li>
+								<li><a href="#">Features</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+                 
+                            
+				<div class="inner cover">
+				<span th:text="${errorMessage} ?: _">no user authenticated</span>
+				<form class="form-signin" action="#" th:action="@{/todo/add}" th:object="${todo}"  method="post">
+						<h2 class="form-signin-heading">Please sign in</h2>
+					
+							 <label for="inputDefine" class="sr-only">Define</label> <textarea maxlength="50" rows="5" cols="10" th:field="*{define}"
+							id="define" class="form-control"
+							placeholder="Define"></textarea> 
+							
+							<label for="inputDate"
+							class="sr-only">Password</label> <input th:field="*{date}" type="date"
+							id="date"   class="form-control" placeholder="Date"></input>
+
+						<button class="btn btn-lg btn-primary btn-block" type="submit">Save
+							</button>
+					</form>
+				</div>
+
+				<div class="mastfoot">
+					<div class="inner">
+						<p>
+							Cover template for <a href="http://getbootstrap.com">Bootstrap</a>,
+							by <a href="https://twitter.com/mdo">@mdo</a>.
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="container"></div>
+<input type="hidden"
+                     name="${_csrf.parameterName}" value="${_csrf.token}" />
+
+	<!--     <button type="button" class="btn btn-success">This is a success button</button> -->
+	<!--     <button type="button" class="btn btn-warning">This is a warning button</button> -->
+	<!--     <button type="button" class="btn btn-danger">This is a danger button</button> -->
+
+	
+
+</body>
+</html>
+
