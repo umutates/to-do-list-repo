@@ -2,7 +2,7 @@
 <application generated-by="eclipse" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.zeroturnaround.com" xsi:schemaLocation="http://www.zeroturnaround.com http://update.zeroturnaround.com/jrebel/rebel-2_1.xsd">
 
 	<classpath>
-		<dir name="/home/umutates/Documents/workspace-sts-3.7.3.RELEASE/to-do-list/target/classes">
+		<dir name="/home/umutates/git/to-do-list-repo/target/classes">
 		</dir>
 	</classpath>
 
