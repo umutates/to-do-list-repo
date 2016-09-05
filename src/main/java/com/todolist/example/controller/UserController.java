@@ -43,8 +43,13 @@ public class UserController {
     
     @PostMapping("/add")
     public String postAdd(@Valid @ModelAttribute("user") User user, BindingResult result,Model model) {
-
-      
+        
+       User savedUser=userService.findByEmail(user.getEmail());
+       if (savedUser!=null) {
+         model.addAttribute("errorMessage","Previously Registered e-mail");
+         model.addAttribute("user",user);
+         return "singup";
+      }
         
         userService.save(user);
         LOGGER.debug("SAVE_OK");
