@@ -26,6 +26,7 @@
 				</div>
 
 				<div class="inner cover">
+				<span th:text="${errorMessage} ?:_"></span>
 				<form class="form-signin" action="#" th:action="@{/user/add}" th:object="${user}"  method="post">
 						<h2 class="form-signin-heading">Please sign up</h2>
 						
