@@ -1,6 +1,5 @@
 package com.todolist.example.service;
 
-import org.h2.index.FunctionCursorResultSet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
